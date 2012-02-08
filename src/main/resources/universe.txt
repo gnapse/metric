@@ -1,0 +1,1055 @@
+
+/**
+ * Measures the extent or amount of space between two points in space.
+ *
+ * @see http://en.wikipedia.org/wiki/Length
+ * @see http://en.wikipedia.org/wiki/Distance
+ */
+length, distance
+{
+    /**
+     * The metre (meter in the US), symbol m, is the base unit of length in the International System
+     * of Units (SI).  Originally intended to be one ten-millionth of the distance from the Earth's
+     * equator to the North Pole (at sea level), its definition has been periodically refined to
+     * reflect growing knowledge of metrology.  Since 1983, it is defined as the length of the path
+     * travelled by light in vacuum in 1 ⁄ 299,792,458 of a second.
+     *
+     * This is the only unit to be defined with all the SI prefixes, partly to serve as a reference
+     * of all the supported prefixes.
+     *
+     * @see http://en.wikipedia.org/wiki/Meter
+     */
+    { yocto, zepto, atto, femto, pico, nano, micro, milli, centi, deci,
+        deca, hecto, kilo, mega, giga, tera, peta, exa, zetta, yotta }
+    meter, metre (m);
+
+    league = 5556 meters;
+
+    nautical mile (nmi) = 1852 meters;
+
+    inch (in) = 25.4 mm;
+
+    { kilo }
+    foot (ft) = 12 inches;
+
+    yard (yd) = 3 feet;
+
+    mile (mi) = 5280 feet;
+
+    fathom = 6 feet;
+
+    chain = 11 fathoms;
+
+    furlong (fur) = 10 chains;
+
+    hand = 4 inches;
+
+    link (li) = 0.66 feet;
+
+    rod, pole, perch (rd) = 16.5 feet;
+
+    survey foot = 1200/3937 meters;
+
+    ångström, angstrom, angström, ångstrom (Å) = 0.1 nm;
+
+    fermi = femtometer;
+
+    micron = micrometer;
+
+    light year (ly) = 9_460_730_472_580_800 m;
+
+    light minute (lmin) = 17_987_547_480 m;
+
+    light second (ls) = 299_792_458 m;
+
+    astronomical unit (au) = 149_597_870_691 m;
+
+    { kilo, mega }
+    parsec (pc) = 206_265 au;
+
+    lunar distance (LD) = 384_401 kilometers;
+
+    /*
+     * Humorous units of length
+     * http://en.wikipedia.org/wiki/List_of_humorous_units_of_measurement#Length
+     */
+
+    beard-second = 5 nanometers;
+    sheppey = 7/8 miles;
+    smoot = 1.7018 meters;
+
+    /*
+     * Typography units
+     */
+
+    PostScript pica, PS pica, pica = 1/6 inches;
+    PostScript point, PS point, point = 1/12 picas;
+    agate line, agate = 1/14 inches;
+
+    cicero, French pica, french pica = 4.511658 mm;
+    didot, didot point, French point, french point = 1/12 cicero;
+
+    (px300) = 1/300 inches;
+    (px150) = 1/150 inches;
+    (px96) = 1/96 inches;
+    (px72) = 1/72 inches;
+}
+
+/**
+ * Temperature is a physical property of matter that quantitatively expresses the common notions of
+ * hot and cold.
+ *
+ * @see http://en.wikipedia.org/wiki/Temperature
+ * @see http://en.wikipedia.org/wiki/Temperature_conversion_formulas
+ */
+temperature
+{
+    { micro, milli }
+    kelvin (K);
+
+    degree Rankine, degree rankine (Ra) = 5/9 kelvin;
+
+    degree Celcius, degree celcius (c) = kelvin + 273.15;
+
+    degree Fahrenheit, degree fahrenheit (f) = 5/9 kelvin + 2298.35/9;
+
+    /*
+     * Some obsolete temperature scales.
+     */
+
+    degree Réaumur, degree réaumur, degree Reaumur, degree reaumur (Ré, Re) = 5/4 K + 273.15;
+
+    degree Rømer, degree rømer, degree Romer, degree romer (Ro) = 40/21 K + 5436.15/21;
+
+    degree Delisle, degree delisle (De) = -2/3 K + 373.15;
+
+    degree Newt, degree newt (Nw) = 100/33 K + 273.15;
+}
+
+/**
+ * Time is a part of the measuring system used to sequence events, to compare the durations of
+ * events and the intervals between them, and to quantify rates of change such as the motions of
+ * objects.
+ *
+ * @see http://en.wikipedia.org/wiki/Time
+ */
+time
+{
+    { femto, pico, nano, micro, milli, kilo, mega, giga, tera, peta }
+    second (s);
+
+    minute (min) = 60 seconds;
+
+    hour (h) = 60 minutes;
+
+    day (d) = 24 hours;
+
+    week (wk) = 7 days;
+
+    year (y, yr) = 31_556_926 seconds;
+
+    common year, standard year = 365 days;
+
+    leap year = 366 days;
+
+    month (mo) = 1/12 years;
+
+    decade = 10 years;
+
+    century = 100 years;
+
+    quinquennium = 5 years;
+
+    luster, lustre, lustrum = 5 years;
+
+    semester = 6 months;
+
+    trimester = 3 months;
+
+    lunar day = 1490 min; // 24h 50min
+
+    martian day, sol = 88_775_244 milliseconds; // 24 hours, 39 minutes, and 35.244 seconds
+
+    martian year = 668.5991 sols;
+}
+
+/**
+ * A quantitative measure of an object's resistance to the change of its speed.  Also commonly
+ * referred to as weight, although they are two different but related concepts.
+ *
+ * In everyday use, the mass of an object is often referred to as its weight though these are in
+ * fact different concepts and quantities.  In scientific contexts, mass refers loosely to the
+ * amount of "matter" in an object (though "matter" may be difficult to define), whereas weight
+ * refers to the force experienced by an object due to gravity.
+ *
+ * @see http://en.wikipedia.org/wiki/Mass
+ * @see http://en.wikipedia.org/wiki/Mass_versus_weight
+ */
+mass
+{
+    { micro, milli, kilo }
+    gram (g);
+
+    pound (lb) = 0.45359237 kg;
+
+    ounce (oz) = 1/16 pounds;
+
+    stone (st) = 14 pounds;
+
+    carat (ct) = 200 mg;
+
+    grain = 64.79891 mg;
+
+    scruple = 20 grains;
+
+    short hundredweight, net hundredweight (net cwt, short cwt) = 100 pounds;
+
+    long hundredweight, gross hundredweight (gross cwt, long cwt) = 112 pounds;
+
+    short ton, short tonne, net ton, net tonne, ton = 20 net hundredweights;
+
+    long ton, long tonne, gross ton, gross tonne = 20 gross hundredweights;
+
+    metric ton, metric tonne, tonne (t, mt) = 1000 kg;
+
+    pennyweight (dwt) = 1.555 grams;
+
+    /**
+     * A unit of mass in the English foot-pound-second system.  One slug is the mass accelerated at
+     * 1 foot per second per second by a force of 1 pound.
+     *
+     * @see http://www.unc.edu/~rowlett/units/dictS.html#slug
+     */
+    slug = 4.4482216152605/0.3048 kg;
+
+    /**
+     * An obsolete MKS unit of mass.  One hyl is the mass that is accelerated at one meter per
+     * second per second by one kilogram of force (kgf).  Since 1 kgf = 9.80665 newtons, the hyl is
+     * equivalent to 9.80665 kilograms.  The name of the unit comes from an ancient Greek word for
+     * matter.
+     *
+     * @see http://www.unc.edu/~rowlett/units/dictH.html#hyl
+     */
+    hyl = 9.80665 kilograms;
+}
+
+/**
+ * Measures the flow of electric charge through a medium.
+ *
+ * @see http://en.wikipedia.org/wiki/Electric_current
+ */
+electric current
+{
+    { nano, micro, milli, kilo, mega }
+    ampere (A);
+
+    abampere (aA) = 10 amperes;
+}
+
+/**
+ * Measures the wavelength-weighted power emitted by a light source in a particular direction per
+ * unit solid angle.
+ *
+ * @see http://en.wikipedia.org/wiki/Luminous_intensity
+ */
+luminous intensity
+{
+    candela (cd);
+
+    candlepower, candle-power, candle power (cp) = candela;
+
+    /**
+     * @see http://en.wikipedia.org/wiki/Hefner_lamp
+     */
+    hefnerkerze = 1.019/1.128 candelas;
+
+    violle = 20.17 candelas;
+}
+
+/**
+ * Measures an angle or rotation. This measure is the ratio of the length of a circular arc by its
+ * radius.
+ *
+ * @see http://en.wikipedia.org/wiki/Angle
+ */
+plane angle
+{
+    { nano, micro, milli }
+    radian (rad);
+
+    { nano, micro, milli, centi, deci }
+    turn, revolution, rotation, cycle, circle = 2*PI radians;
+
+    full circle = turn;
+
+    right angle, quadrant (quad) = 1/4 turn;
+
+    grad = 1/400 turns;
+
+    degree = 1/360 turns;
+
+    hour-angle = 1/24 turns;
+
+    binary radian (brad) = 1/256 turn;
+
+    diameter part = 1/60 radian;
+
+    arcminute (moa) = 1/60 degree;
+
+    { micro, milli }
+    arcsecond (soa, as) = 1/60 arcminute;
+}
+
+/**
+ * The two-dimensional angle in three-dimensional space that an object subtends at a point.  It is a
+ * measure of how large that object appears to an observer looking from that point.
+ *
+ * @see http://en.wikipedia.org/wiki/Solid_angle
+ */
+solid angle
+{
+    steradian (sr);
+
+    sphere = 4*PI sr;
+}
+
+/**
+ * Measures the size of an ensemble of elementary entities, such as atoms, molecules, electrons, and
+ * other particles.
+ *
+ * @see http://en.wikipedia.org/wiki/Amount_of_substance
+ */
+amount of substance
+{
+    { atto, femto, pico, nano, micro, milli, kilo }
+    mole (mol);
+
+    pound-mole (lb-mol) = 453.59237 mol;
+
+    //kilogram-mole (kg-mol) = ? mol;
+    //gram-mole (g-mol) = ? mol;
+}
+
+//--------------------------------------------------------------------------------------------------
+// Derived units
+//--------------------------------------------------------------------------------------------------
+
+/**
+ * Measures the extent of a two-dimensional surface or shape in the plane.
+ *
+ * @see http://en.wikipedia.org/wiki/Area
+ */
+area = length^2
+{
+    hectare (ha) = 10_000 square meters;
+
+    acre (ac) = 43_560 square feet;
+
+    section = 640 acres;
+
+    township (twp) = 36 sections;
+
+    /*
+     * Humorous units of area
+     * http://en.wikipedia.org/wiki/List_of_humorous_units_of_measurement#Area
+     */
+
+    barn = 1e-28 m^2;
+    outhouse = 1e-6 barns;
+    shed = 1e-24 barns;
+}
+
+//--------------------------------------------------------------------------------------------------
+// Measuring volume and concentration of materials
+//--------------------------------------------------------------------------------------------------
+
+/**
+ * Measures the quantity of three-dimensional space enclosed by some closed boundary, for example,
+ * the space that a substance (solid, liquid, gas, or plasma) or shape occupies or contains.
+ *
+ * @see http://en.wikipedia.org/wiki/Volume
+ */
+volume = length^3
+{
+    { micro, milli, centi, deci, hecto, kilo, mega, giga }
+    litre, liter (l, L) = 1000 cubic centimeters;
+
+    (cc) = cubic centimeter;
+
+    stere = 1 cubic meter;
+
+    //
+    // U.S. customary units
+    //
+
+    US gallon, us gallon, gallon (gal) = 231 cubic inches;
+
+    US quart, us quart, quart (qt) = 1/4 gallons;
+
+    US pint, us pint, pint (pt) = 1/2 quart;
+
+    US cup, us cup, cup = 1/2 pint;
+
+    US gill, us gill, gill  = 1/2 cup;
+
+    US fluid ounce, us fluid ounce, fluid ounce (fl oz) = 1/4 gill;
+
+    US tablespoon, us tablespoon, tablespoon (tbsp) = 1/2 fluid ounce;
+
+    US teaspoon, us teaspoon, teaspoon (tsp) = 1/3 tbsp;
+
+    US peck, us peck, peck = 2 gallons;
+
+    US bushel, us bushel, bushel (bsh, bu) = 4 pecks;
+
+    kenning = 2 pecks;
+
+    oil barrel (bbl) = 42 gal;
+
+    hogshead = 63 gal;
+
+    shot, jigger = 3 tablespoons;
+
+    snit = 3 fluid ounces;
+
+    //
+    // Imperial units
+    //
+
+    Imperial gallon, imperial gallon = 4.54609 liters;
+
+    Imperial quart, imperial quart = 1/4 imperial gallon;
+
+    Imperial pint, imperial pint = 1/2 imperial quart;
+
+    Imperial cup, imperial cup = 1/2 imperial pint;
+
+    Imperial gill, imperial gill = 1/2 imperial cup;
+
+    Imperial fluid ounce, imperial fluid ounce, Imperial ounce, imperial ounce = 1/5 imperial gill;
+
+    Imperial peck, imperial peck = 2 imperial gallons;
+
+    Imperial bushel, imperial bushel = 4 imperial pecks;
+}
+
+/**
+ * Measures the amount of mass per unit of volume.
+ *
+ * @see http://en.wikipedia.org/wiki/Density
+ */
+density = mass / volume
+{
+}
+
+/**
+ * Measures the ammount of substance per unit of volume.
+ *
+ * @see http://en.wikipedia.org/wiki/Molar_concentration
+ */
+molar concentration = amount of substance / volume
+{
+    { yocto, zepto, atto, femto, pico, nano, micro, milli }
+    molar (M) = 1 mole per liter;
+}
+
+volumetric flow = volume / time
+{
+}
+
+/**
+ * Note: Is the inverse of area
+ */
+fuel economy = distance / volume
+{
+}
+
+// Has the same dimensions as area
+//fuel consumption = volume / distance {
+//}
+
+mass flow = mass / time
+{
+}
+
+// TODO: mass flux has the same dimension of sound impedance
+// mass flux = mass flow / area
+// {
+// }
+
+//--------------------------------------------------------------------------------------------------
+// Measuring movements and changes of space and position over time
+//--------------------------------------------------------------------------------------------------
+
+/**
+ * Measures the rates of events that happen periodically in a fixed and definite cycle.
+ */
+frequency = inverse time
+{
+    { kilo, mega, giga, mega, tera, peta }
+    hertz (Hz) = 1 inverse second;
+}
+
+/**
+ * The speed of an object is the magnitude of its velocity (the rate of change of its position); it
+ * is thus a scalar quantity.  Speed describes only how fast an object is moving, whereas velocity
+ * gives both the speed and direction of the object's motion.
+ *
+ * @see http://en.wikipedia.org/wiki/Speed
+ * @see http://en.wikipedia.org/wiki/Velocity
+ */
+speed, velocity = length / time
+{
+    (fpm) = feet per minute;
+
+    (fps) = feet per second;
+
+    (kph) = km per hour;
+
+    (kpm) = km per min;
+
+    (mps) = meters per second;
+
+    (mph) = miles per hour;
+
+    (mpm) = miles per minute;
+
+    knot (kt) = 1.852 kph;
+}
+
+/**
+ * Measures the rate of change of velocity with time.
+ *
+ * @see http://en.wikipedia.org/wiki/Acceleration
+ */
+acceleration = speed / time
+{
+    (G) = 9.80665 mps per second;
+}
+
+/**
+ * Measures the speed of an object moving in a circular path, in terms of how fast the object
+ * covers a certain angle per unit of time.
+ */
+angular velocity = plane angle / time
+{
+    (rpm) = revolutions per minute;
+}
+
+momentum = mass * speed
+{
+}
+
+//--------------------------------------------------------------------------------------------------
+// Energy, power, force and related concepts
+//--------------------------------------------------------------------------------------------------
+
+force = mass * acceleration
+{
+    { kilo }
+    newton (N) = 1 kg m / s^2;
+
+    dyne (dyn) = 1 g cm / s^2;
+
+    poundal (pdl) = 1 lb ft / s^2;
+
+    kilopond (kp) = 9.80665 N;
+
+    kilogram-force (kgf) = 1 kilopond;
+
+    pound-force (lbf) = 4.4482216152605 N;
+
+    sthene (sn) = 1 kilonewton;
+}
+
+/**
+ * Measures the force exerted per unit of area.
+ */
+pressure = force / area
+{
+    { hecto, kilo }
+    pascal (Pa) = 1 newton per square meter;
+
+    barye (Ba) = 1 dyne per square cm;
+
+    { milli, centi, deci, kilo, mega }
+    bar = 100 kPa;
+
+    atmosphere (atm) = 1013.25 hPa;
+
+    torr = 133.322 pascal;
+
+    (psi) = 1 lb G per square inch;
+
+    (psf) = 1 lb G per square foot;
+
+    // TODO: Some units pending to be defined
+    // centimeter of mercury (cmHg)
+    // centimeter of water (cmH2O, cmAq)
+    // milimeter of mercury (mmHg)
+    // milimeter of water (mmH2O, mmAq)
+    // inch of mercury (inHg)
+    // inch of water (inH2O, inAq)
+}
+
+/**
+ * Measures the amount of work performed by a force that acts through a distance. It is defined as
+ * the product of a force times the distance through which it acts.
+ *
+ * It also defines energy, since work and energy are two deeply related concepts, and when viewed as
+ * physical quantities, they're both measured with the same units and both properties have the same
+ * dimension. Therefore, from a conversion point of view, both properties are the same.
+ *
+ * @see http://en.wikipedia.org/wiki/Work_(physics)
+ * @see http://en.wikipedia.org/wiki/Energy
+ * @see http://en.wikipedia.org/wiki/Units_of_energy
+ */
+work, energy = force * distance
+{
+    { nano, micro, milli, kilo, mega, giga, tera, peta, exa, zetta, yotta }
+    joule (J) = 1 N m;
+
+    erg = 1 dyne cm;
+
+    { milli, kilo, mega, giga, tera, peta }
+    electronvolt (eV) = 1.60217653e-19 J;
+
+    { kilo }
+    calorie (cal) = 4.184 joules;
+
+    { kilo }
+    (btu, Btu) = 1055.05585 joules;
+
+    ton-of-oil, tonne-of-oil (toe) = 41.868 GJ;
+
+    barrel of oil, barrel-of-oil (boe) = 5.8e6 btu;
+
+    /*
+     * Measuring the amount of energy released by explosions
+     */
+
+    ton-of-TNT, ton-of-tnt,
+    tonne-of-TNT, tonne-of-tnt = 4.184 GJ;
+
+    megaton = 4.184 PJ;
+
+    kiloton = 1/1000 megatons;
+
+    gigaton = 1000 megatons;
+
+    thermie (th) = 4.1868 MJ;
+}
+
+/**
+ * Measures the rate at which work is performed, or the rate at which energy is transferred, used,
+ * or transformed.
+ *
+ * @see http://en.wikipedia.org/wiki/Power_(physics)
+ */
+power = work / time
+{
+    { femto, pico, nano, micro, milli, kilo, mega, giga, tera, peta }
+    watt (W) = 1 joule per second;
+
+    horsepower (hp) = 745.699872 W;
+
+    metric horsepower (hpM) = 735.49875 W;
+
+    electrical horsepower (hpE) = 746 W;
+
+    boiler horsepower (hpS) = 9809.5 W;
+
+    pferdestärke, pferdestarke (PS) = 1 hpM;
+
+    ton-of-refrigeration (TR, RT) = 3516.8528 W;
+
+    lusec = 133.3 uW;
+
+    /*
+     * Humorous units of power
+     * http://en.wikipedia.org/wiki/List_of_humorous_units_of_measurement#Power
+     */
+
+    donkeypower = 250 W;
+}
+
+//--------------------------------------------------------------------------------------------------
+// Electricity and magnetism
+//--------------------------------------------------------------------------------------------------
+
+/**
+ * A physical property of matter that causes it to experience a force when near other electrically
+ * charged matter.
+ *
+ * @see http://en.wikipedia.org/wiki/Electric_charge
+ */
+electric charge = electric current * time
+{
+    { nano, micro, milli, kilo, mega }
+    coulomb (C) = 1 ampere second;
+
+    abcoulomb (abC, aC) = 10 coulombs;
+
+    faraday (Fd) = 96_485.3415 coulombs;
+}
+
+electric potential, voltage = work / electric charge
+{
+    { nano, micro, milli, kilo, mega, giga }
+    volt (V) = 1 J/C;
+}
+
+electric capacitance = electric charge / electric potential
+{
+    { pico, nano, micro, milli }
+    farad (F) = 1 C/V;
+
+    jar = 1/9e8 farads;
+}
+
+electric elastance = electric capacitance^-1
+{
+    daraf = farad^-1;
+}
+
+electric resistance = electric potential / electric current
+{
+    ohm, omega (O) = 1 V/A;
+}
+
+electric conductance = electric current / electric potential
+{
+    siemens (S) = 1 A/V;
+}
+
+magnetic flux = electric potential * time
+{
+    { nano, micro, milli }
+    weber (Wb) = 1 V s;
+
+    maxwell (Mx) = 1e-8 Wb;
+}
+
+/**
+ * http://en.wikipedia.org/wiki/Magnetic_field
+ */
+magnetic flux density = magnetic flux / area
+{
+    { nano, micro, milli }
+    tesla (T) = 1 Wb / m^2;
+
+    gauss = 1 Mx / cm^2;
+}
+
+inductance = magnetic flux / electric current
+{
+    { micro, milli }
+    henry (H) = 1 Wb/A;
+}
+
+//--------------------------------------------------------------------------------------------------
+// Illumination and light-related measurements
+//--------------------------------------------------------------------------------------------------
+
+luminous flux = luminous intensity * solid angle
+{
+    lumen (lm) = 1 candela * steradian;
+}
+
+illuminance = luminous flux / area
+{
+    { milli, kilo }
+    lux (lx) = 1 lumen per square meter;
+
+    { milli, kilo }
+    lambert (La, Lb) = 1 lumen per square centimeter;
+
+    phot (ph) = 1 lm/cm^2;
+
+    foot-candle, footcandle (fc, ftc) = 10.764 lux;
+
+    foot-lambert, footlambert (fL, fl, ftL) = 1 lumen per square feet;
+
+    nox = 0.001 lux;
+
+    // TODO: nit(nt) = 1 cd / m^2;
+}
+
+luminous energy, quantity of light = luminous flux * time
+{
+    talbot = lm s;
+}
+
+//--------------------------------------------------------------------------------------------------
+// Radioactivity
+//--------------------------------------------------------------------------------------------------
+
+radiation dose = work / mass
+{
+    { micro, milli, kilo }
+    gray, Gy = 1 joule per kilogram;
+
+    { micro, milli, kilo }
+    Rad = 0.01 Gy;
+
+    { micro, milli, kilo }
+    sievert (Sv) = 1 joule per kilogram;
+
+    { micro, milli, kilo }
+    rem = 0.01 Sv;
+
+    /**
+     * An obsolete unit of absorbed radiation. "Rep" is an acronym for "roentgen equivalent:
+     * physical."  The definition was made because a dose of 1 rep of beta rays was considered
+     * biologically equivalent to a dose of 1 roentgen (see below) of X rays.
+     */
+    rep = 93 ergs per gram;
+}
+
+/**
+ * TODO
+ *
+ * @see http://en.wikipedia.org/wiki/Ionizing_radiation#Units
+ */
+ionizing radiation = electric charge / mass
+{
+    { micro, milli, kilo }
+    röntgen, roentgen, rontgen (R) = 2.581e-4 C/kg;
+}
+
+/**
+ * A dummy and dimensionless property used to be able to define the radioactivity property. It
+ * measures a number (count) of radioactive atomic decays. Radioactivity is thus defined as the
+ * number of radioactive decays that occur per unit of time.
+ *
+ * @see http://en.wikipedia.org/wiki/Radioactive_decay
+ */
+radioactive decay
+{
+    radioactive decay, decay;
+}
+
+/**
+ * Measures the number of radioactive decays ocurring per unit of time.
+ *
+ * @see http://en.wikipedia.org/wiki/Radioactive_decay
+ * @see http://en.wikipedia.org/wiki/Becquerel
+ * @see http://en.wikipedia.org/wiki/Curie
+ */
+radioactivity = radioactive decay / time
+{
+    { kilo, mega, giga, tera, peta }
+    becquerel, radiation unit (Bq) = 1 decay per second;
+
+    { pico, nano, micro, milli }
+    curie (Ci) = 37 GBq;
+}
+
+//--------------------------------------------------------------------------------------------------
+// Other exotic and rare properties
+//--------------------------------------------------------------------------------------------------
+
+/**
+ * Measures the rate at which a catalytic agent acts in a chemical reaction.
+ */
+catalytic activity = amount of substance / time
+{
+    /**
+     * A unit of catalytic activity used especially in the chemistry of enzymes. A catalyst is a
+     * substance that starts or speeds a chemical reaction. Enzymes are proteins that act as
+     * catalysts within the bodies of living plants and animals. A catalyst has an activity of one
+     * katal if it enables a reaction to proceed at the rate of one mole per second. The unit,
+     * pronounced "cattle," was added to the International System at the 21st General Conference of
+     * Weights and Measures in October 1999.
+     *
+     * @see http://www.unc.edu/~rowlett/units/dictK.html#katal
+     */
+    { pico, nano, micro, milli, kilo }
+    katal (kat) = 1 mole per second;
+}
+
+
+// TODO: Some properties that are still mising
+
+reciprocal length = length^-1
+{
+    diopter, dioptre (dpt) = inverse meter;
+}
+
+sound impedance = pressure * time / length
+{
+    rayl = Pa s / m;
+}
+
+sound resistance = sound impedance / area
+{
+    acoustic ohm = 1 rayl per square meter;
+}
+
+/**
+ * The thermal resistance of an insulating material, in thermal ohms, is the R-value divided by the
+ * thickness of the material, in meters.  The name expresses an analogy between heat flow and
+ * electric current: the temperature difference (in kelvins or °C) corresponds to electric potential
+ * difference (in volts), while the heat flow rate (in watts, equal to joules per second)
+ * corresponds to electric current (in amperes).  By Ohm's Law, the ratio of potential to current is
+ * the electric resistance (measured in ohms).  Thus the corresponding ratio of temperature
+ * difference to heat flow rate is measured in thermal ohms.
+ *
+ * @see http://www.unc.edu/~rowlett/units/dictT.html#thermal_ohm
+ */
+absolute thermal resistance = temperature / power
+{
+    thermal ohm = 1 kelvin per watt;
+}
+
+thermal resistance = absolute thermal resistance * area
+{
+    (clo) = 0.155 thermal ohm * m^2;
+    tog = 0.1 thermal ohm * m^2;
+}
+
+dynamic viscosity = pressure * time
+{
+    poiseuille (Pl) = Pa s;
+}
+
+//--------------------------------------------------------------------------------------------------
+// Information units
+//--------------------------------------------------------------------------------------------------
+
+data size, data
+{
+    { kilo, mega, giga, tera, peta, exa, zetta, yotta,
+        kibi, mebi, gibi, tebi, pebi, exbi, zebi, yobi }
+    byte, Byte, Octet (B);
+
+    { kilo, mega, giga, tera, peta, exa, zetta, yotta,
+        kibi, mebi, gibi, tebi, pebi, exbi, zebi, yobi }
+    bit, Bit (b) = 1/8 bytes;
+
+    kbit, Kbit = kilobit;
+    mbit, Mbit = megabit;
+    gbit, Gbit = gigabit;
+}
+
+data rate, bit rate, bitrate, bandwidth = data / time
+{
+    { kilo, mega, giga, tera, peta,
+        kibi, mebi, gibi, tebi, pebi }
+    (bps) = bits per second;
+
+    { kilo, mega, giga, tera, peta,
+        kibi, mebi, gibi, tebi, pebi }
+    (Bps) = Bytes per second;
+}
+
+//--------------------------------------------------------------------------------------------------
+// Currency exchange
+// Taken from:
+// http://openexchangerates.org/latest.json
+// http://openexchangerates.org/currencies.json
+// http://openexchangerates.org/historical/2011-10-18.json
+//--------------------------------------------------------------------------------------------------
+
+/**
+ * Represents the money property, whose units are the currencies from the different countries.
+ *
+ * Currency names and exchange rates are automatically loaded by the metric engine from the
+ * following sources:
+ *
+ * http://openexchangerates.org/latest.json
+ * http://openexchangerates.org/currencies.json
+ *
+ * Note the peculiar syntax of the money property definition. It will only be allowed once in a
+ * universe definition file, and what identifies it is the $ sign in front of the opening brace.
+ *
+ * Between braces you can specify aliases for convenient names for certain currencies. The most
+ * noticeable one is the US Dollar, which is only recognized as "USD" or "United States Dollar", but
+ * it almost always is convenient to refer to it simply as "dollar". Alias definitions consists of
+ * the currency code in its original upercase form, followed by a colon (:) and a comma-separated
+ * list of aliases and a semicolon. Aliases should be specified in title case (first letter
+ * capitalized) and in their singular form. The system will automatically add the lowercase form and
+ * plural forms of both. That is, when specifying "Dollar" you automatically obtain "Dollars",
+ * "dollar" and "dollars" for free.
+ *
+ * @see http://josscrowcroft.github.com/open-exchange-rates/
+ * @see http://currencybot.github.com/
+ */
+money, cash, wealth ${
+    // To support some simple and unique shorter names more common in everyday use
+    AFN: Afghani;
+    AMD: Dram;
+    ANG: Guilder;
+    ALL: Lek;
+    AOA: Kwanza;
+    AZN: Manat;
+    BDT: Taka;
+    BOB: Boliviano;
+    BRL: Real;
+    BTN: Ngultrum;
+    BWP: Pula;
+    CNY: Yuan;
+    CZK: Koruna;
+    ETB: Birr;
+    //GBP: Pound; // Cannot be used because conflicts with the mass unit "pound"
+    GEL: Lari;
+    GHS: Cedi;
+    GMD: Dalasi;
+    GTQ: Quetzal;
+    HNL: Lempira;
+    HRK: Kuna;
+    HTG: Gourde;
+    HUF: Forint;
+    IDR: Rupiah;
+    ILS: New Sheqel;
+    JPY: Yen;
+    KHR: Riel;
+    KZT: Tenge;
+    LAK: Kip;
+    LSL: Loti;
+    MGA: Ariary;
+    MKD: Denar;
+    MMK: Kyat;
+    MNT: Tugrik;
+    MOP: Pataca;
+    MRO: Ouguiya;
+    MVR: Rufiyaa;
+    MYR: Ringgit;
+    MZN: Metical;
+    NGN: Naira;
+    NIO: Córdoba, Cordoba, Nicaraguan Cordoba;
+    PAB: Balboa;
+    PEN: Nuevo Sol;
+    PGK: Kina;
+    PLN: Zloty;
+    PYG: Guarani;
+    RUB: Ruble;
+    SLL: Leone;
+    STD: Dobra;
+    SZL: Lilangeni;
+    THB: Baht;
+    TJS: Somoni;
+    TOP: Paanga, Tongan Paanga; // Really named Paʻanga, but we cannot use this special character
+    UAH: Hryvnia;
+    USD: Dollar;
+    VEF: Bolívar, Bolivar;
+    VND: Dong;
+    VUV: Vatu;
+    WST: Tala;
+    ZAR: Rand;
+
+    /*
+     * The following is not an error. These currencies have a singular form ending in -s. The metric
+     * library generates their plural form correctly.
+     *
+     * @see http://en.wikipedia.org/wiki/Lithuanian_litas
+     * @see http://en.wikipedia.org/wiki/Latvian_lats
+     */
+    LTL: Litas;
+    LVL: Lats;
+
+    // To support the versions without the diacritic accent
+    CRC: Costa Rican Colon;
+    ISK: Icelandic Krona;
+    SVC: Salvadoran Colon;
+}
