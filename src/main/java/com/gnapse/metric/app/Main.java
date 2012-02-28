@@ -39,7 +39,8 @@ import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 /**
- * A simple application that reads unit conversion queries from the command-line arguments.
+ * A simple application that reads a unit conversion query from the command-line arguments and
+ * prints the result to standard output.
  *
  * @author Ernesto García
  */
@@ -84,11 +85,9 @@ public class Main {
     private static void run(String[] args) throws SyntaxError, MetricException, IOException {
         final File universeFile = copyResource(UNIVERSE_FILE_NAME);
         final Universe universe = new Universe(universeFile);
-        final Iterable<String> queries = Splitter.on(",").split(Joiner.on(" ").join(args));
-        for (String queryStr : queries) {
-            ConversionQuery query = universe.convert(queryStr);
-            System.out.println(query.toStringResults());
-        }
+        String queryStr = Joiner.on(" ").join(args);
+        ConversionQuery query = universe.convert(queryStr);
+        System.out.println(query.toStringResults());
     }
 
     /**
