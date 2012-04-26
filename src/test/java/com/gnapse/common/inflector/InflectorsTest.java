@@ -270,7 +270,7 @@ public class InflectorsTest {
         { "church", "churches" },
 
         // -th endings
-        { "cloth", "clothes" },
+        { "cloth", "cloths" },
         { "death", "deaths" },
         { "bath", "baths" },
         { "mouth", "mouths" },
