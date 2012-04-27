@@ -670,7 +670,7 @@ public final class Inflectors {
             { "testis", "testes" },
             { "atlas", "atlases" },
             { "alias", "aliases" },
-            { "cloth", "clothes" },
+            { "cloth", "cloths" },
         });
 
         /**
