@@ -38,6 +38,8 @@ import java.util.Collections;
 import java.util.EnumSet;
 import java.util.List;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Parses universe definition files and conversion queries in the context of a given
@@ -52,6 +54,8 @@ class Parser {
     private Token tok;
 
     private final Universe universe;
+
+    private static final Logger LOGGER = Logger.getLogger(Parser.class.getName());
 
     private static final Joiner wordJoiner = Joiner.on(' ');
 
@@ -147,10 +151,15 @@ class Parser {
         List<String> names = parseNamesList();
 
         if (tok.is(TokenType.DOLLAR)) {
-            tok = tok.next();
-            names.add("$"); // ensuring the money property isn't added twice in the same universe
-            Multimap<String, String> currencyAliases = parseCurrencyAliases();
-            return new CurrencyLoader(universe, names, currencyAliases).getProperty();
+            try {
+                tok = tok.next();
+                names.add("$"); // ensuring the money property isn't added twice in the same universe
+                Multimap<String, String> currencyAliases = parseCurrencyAliases();
+                return new CurrencyLoader(universe, names, currencyAliases).getProperty();
+            } catch (Exception e) {
+                LOGGER.log(Level.SEVERE, "Currency definitions were not loaded");
+                return null;
+            }
         }
 
         if (tok.is(TokenType.EQUALS)) {

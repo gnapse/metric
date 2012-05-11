@@ -133,7 +133,8 @@ final class CurrencyLoader {
             }
             property.freezeUnits();
         } catch (Exception e) {
-            throw MetricException.wrapper("Error while loading currency definitions", e);
+            Throwables.propagateIfInstanceOf(e, MetricException.class);
+            throw Throwables.propagate(e);
         }
     }
 
@@ -170,15 +171,22 @@ final class CurrencyLoader {
 
         for (Object obj : rates.entrySet()) {
             Map.Entry entry = (Map.Entry) obj;
+
             code = (String) entry.getKey();
             if (code.equals(baseUnitCode) || IGNORED_CURRENCIES.contains(code)) {
                 continue;
             }
+
             name = (String) names.get(code);
+            if (name == null) {
+                continue;
+            }
+
             rate = BigFraction.valueOf((Number) entry.getValue());
             if (rate.equals(BigFraction.ZERO)) {
                 continue;
             }
+
             result.add(newUnitDef(code, name, baseUnitFactors, rate.reciprocal()));
         }
 
