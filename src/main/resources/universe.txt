@@ -109,7 +109,7 @@ temperature
 
     degree Rankine, degree rankine (Ra) = 5/9 kelvin;
 
-    degree Celcius, degree celcius (c) = kelvin + 273.15;
+    degree Celsius, degree celsius (c) = kelvin + 273.15;
 
     degree Fahrenheit, degree fahrenheit (f) = 5/9 kelvin + 2298.35/9;
 
