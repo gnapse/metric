@@ -1,7 +1,7 @@
 Metric: Unit Conversion for Java
 ================================
 
-Metric is a Java library that processes unit conversion queries written in natural language.  It currently understands only English, but it aims at supporting other languages in the future.  Among the major highlights, it supports currency conversion and unit prefixes, both [SI prefixes](http://en.wikipedia.org/wiki/SI_prefix) and [binary prefixes](http://en.wikipedia.org/wiki/Binary_prefix).
+Metric is a Java library that processes unit conversion queries written in natural language.  It currently understands only English, but it aims at supporting other languages in the future.  Among the major highlights, it supports currency conversion and unit prefixes, both [SI prefixes](http://en.wikipedia.org/wiki/SI_prefix) and [binary prefixes](http://en.wikipedia.org/wiki/Binary_prefix). It also stores numberic values internally, and performs calculations, using arbitrary precision fractions, so there's absolutely no loss of precision in the conversions.
 
 The library loads unit definitions from a *universe definition file*, where properties and their units are declared and defined. Refer to the sample file included in the project to get an idea of the syntax and features supported.
 
